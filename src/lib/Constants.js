@@ -59,7 +59,7 @@ module.exports = {
          enabled: true,
          delay: 30,
          dm: true,
-         dmMessage: 'Hey, i won the giveaway. Could i redeem my prize?',
+         dmMessage: 'Cześć wygrałem giveawaya, mogę odebrać nagrodę?',
          dmDelay: 25,
          blacklistedWords: [
             'bot',
@@ -148,47 +148,47 @@ module.exports = {
    inviteFail: (invite, server, location, error, author, account, time) => `${account} failed to join ${server} after ${time} | ${error} | Invite: ${invite} | ${location} | ${author}`,
    fields: {
       codeFail: (time, code, location) => [
-         { key: 'Time Taken', value: time },
-         { key: 'Code', value: code },
-         { key: 'Location', value: location },
+         { key: 'Czas kliknięcia', value: time },
+         { key: 'Kod', value: code },
+         { key: 'Miejsce', value: location },
       ],
       codeSuccess: (time, type, code, location) => [
-         { key: 'Time Taken', value: time, },
-         { key: 'Type', value: type },
-         { key: 'Code', value: code },
-         { key: 'Location', value: location },
+         { key: 'Czas kliknięcia', value: time, },
+         { key: 'Rodzaj', value: type },
+         { key: 'Kod', value: code },
+         { key: 'Miejsce', value: location },
       ],
       giveawayEntered: (server, channel, timeTook, prize) => [
-         { key: 'Location', value: `${server} > #${channel}` },
-         { key: 'Prize', value: prize },
-         { key: 'Time Waited', value: timeTook }
+         { key: 'Miejsce', value: `${server} > #${channel}` },
+         { key: 'Nagroda', value: prize },
+         { key: 'Opóźnienie przed dołączeniem', value: timeTook }
       ],
       giveawayWin: (server, channel, prize) => [
-         { key: 'Location', value: `${server} > #${channel}` },
-         { key: 'Prize', value: prize },
+         { key: 'Miejsce', value: `${server} > #${channel}` },
+         { key: 'Nagroda', value: prize },
       ],
       inviteJoin: (location, invite, server, timeTook) => [
-         { key: 'Location', value: location },
-         { key: 'Server Joined', value: server },
-         { key: 'Invite Used', value: invite },
-         { key: 'Time Waited', value: timeTook }
+         { key: 'Miejsce', value: location },
+         { key: 'Dołączono do serwera', value: server },
+         { key: 'Kod zapraszający', value: invite },
+         { key: 'Opóźnienie dołączenia', value: timeTook }
       ],
       inviteFail: (location, error, invite, server, timeTook) => [
-         { key: 'Location', value: location },
-         { key: 'Server', value: server },
-         { key: 'Invite Used', value: invite },
-         { key: 'Time Waited', value: timeTook },
-         { key: 'Error', value: error }
+         { key: 'Miejsce', value: location },
+         { key: 'Serwer', value: server },
+         { key: 'Kod zapraszający', value: invite },
+         { key: 'Opóźnienie dołączenia', value: timeTook },
+         { key: 'Błąd...', value: error }
       ]
    },
    titles: {
-      codeInvalid: 'Invalid Code',
-      codeAlreadyRedeemed: 'Already Redeemed Code',
-      codeSuccess: 'Nitro Sniped',
-      giveawayEntered: 'Giveaway Entered',
-      giveawayWin: 'Giveaway Won',
-      inviteJoin: 'Joined Server',
-      inviteFail: 'Invite Snipe Failed'
+      codeInvalid: 'Błędny kod',
+      codeAlreadyRedeemed: 'Zużyty kod',
+      codeSuccess: 'Nitro zdobyte!',
+      giveawayEntered: 'Dołączono do giveawaya',
+      giveawayWin: 'Wygrany giveaway',
+      inviteJoin: 'Dołączenie do serwera',
+      inviteFail: 'Błąd w dołączaniu do serwera'
    },
    colors: {
       error: '#FF0000',
